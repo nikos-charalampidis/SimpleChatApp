@@ -5,13 +5,24 @@ import java.net.*;
 
  	BufferedReader user = new BufferedReader(new InputStreamReader(System.in));
 
- 	public String sendMessage() throws IOException {
+ 	/**
+	 * Prompts the user to input a message and returns the input.
+	 * 
+	 * @return The message input by the user.
+	 * @throws IOException If an input or output exception occurs while reading the user's input.
+	 */
+	public String sendMessage() throws IOException {
 
-      	System.out.print("Send message, CLOSE for exit:");
- 		String theOutput = user.readLine();
+		// Prompt the user to enter a message or type "CLOSE" to exit
+		System.out.print("Send message, CLOSE for exit:");
 
- 			return theOutput;
-         }
+		// Read the user's input from the console
+		String theOutput = user.readLine();
+
+		// Return the user's input
+		return theOutput;
+	}
+
 
  	public String receiveMessage(String theInput) throws IOException {
 
